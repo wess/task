@@ -1,0 +1,6 @@
+
+import task
+
+task("testing") { arguments in
+  print("Hello World")
+}
