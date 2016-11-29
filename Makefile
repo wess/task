@@ -1,8 +1,8 @@
 
-all: run
+all: version
 
 build:
-	@swift build 
+	@swift build
 
 install:
 	@mv .build/release/task /usr/local/bin/
@@ -16,9 +16,14 @@ xcode:
 	@swift package generate-xcodeproj
 
 run: build
-	@.build/debug/task testing
+	@.build/debug/task
 
 release: clean
 	@swift build --configuration release
-	
+
+help: build
+	@.build/debug/task help
+
+version: build
+	@.build/debug/task version
 

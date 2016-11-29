@@ -4,7 +4,8 @@ let package = Package(
     name: "task",
 
     targets: [
-      Target(name: "task", dependencies: []),
+      Target(name: "task", dependencies: ["middleware",]),
+      Target(name: "middleware"),
     ],
 
     dependencies: [
